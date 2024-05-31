@@ -271,12 +271,12 @@ const Index = () => {
   return (
     <Main
       meta={
-        <Meta title="Toke swap page" description="I simple uniswap clone" />
+        <Meta title="Token swap page" description="A simple Uniswap clone" />
       }
     >
       <div className="mt-10 flex w-full flex-col justify-around rounded bg-gray-300 py-2">
         <div className="flex justify-start px-4">
-          <div className="text-primary-300">Swap Tokens</div>
+          <div className="text-primary-300">Swap Tokens - TOGGLE SWITCH HERE</div>
         </div>
         <div className="relative flex h-auto w-full flex-col rounded">
           <div className="relative flex h-auto w-full flex-col pt-2">
