@@ -1,0 +1,38 @@
+@tailwind base;
+
+@font-face {
+  font-family: "pixel";
+  src: url("../../public/fonts/pixel-font-7.ttf");
+}
+@font-face {
+  font-family: "workSans regular";
+  src: url("../../public/fonts/WorkSansFamily/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "workSans medium";
+  src: url("../../public/fonts/WorkSansFamily/WorkSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "workSans semibold";
+  src: url("../../public/fonts/WorkSansFamily/WorkSans-SemiBold.ttf");
+}
+a {
+  @apply text-blue-700;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
