@@ -259,7 +259,7 @@ const Index = () => {
       }
       return 'Swap Tokens';
     }
-    return 'Switch to Goreli Network';
+    return 'Switch to Sepolia Network';
   };
 
   const getButtonClasses = () => {
@@ -276,7 +276,7 @@ const Index = () => {
     >
       <div className="mt-10 flex w-full flex-col justify-around rounded bg-gray-300 py-2">
         <div className="flex justify-start px-4">
-          <div className="text-primary-300">Swap Tokens - TOGGLE SWITCH HERE</div>
+          <div className="text-primary-300">Swap Tokens</div>
         </div>
         <div className="relative flex h-auto w-full flex-col rounded">
           <div className="relative flex h-auto w-full flex-col pt-2">
