@@ -303,7 +303,7 @@ const Index = () => {
                   input={tokenInput}
                   setInput={setTokenInput}
                   balance={tokenBalance}
-                  tokenName={''}
+                  tokenName={'Any'}
                 />
               </>
             ) : (
