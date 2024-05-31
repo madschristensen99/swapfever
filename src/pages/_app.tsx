@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import {
   configureChains,
   createClient,
-  sepolia,
+  goerli,
   mainnet,
   WagmiConfig,
 } from 'wagmi';
