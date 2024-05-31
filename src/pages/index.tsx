@@ -189,7 +189,7 @@ const Index = () => {
     if (chain && chain.id !== 11155111) {
       // handle switching networks
       try {
-        if (switchNetwork) await switchNetwork(5);
+        if (switchNetwork) await switchNetwork(11155111);
       } catch (err) {
         // eslint-disable-next-line no-console
         console.log(err);
