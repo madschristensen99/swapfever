@@ -87,7 +87,7 @@ const Index = () => {
   const { address, isDisconnected } = useAccount();
   const { chain } = useNetwork();
   const { switchNetwork } = useSwitchNetwork();
-  const provider = useProvider({ chainId: 5 });
+  const provider = useProvider({ chainId: 11155111 });
   // display state managment
   const [tokenInput, setTokenInput] = React.useState('0');
   const [tokenBalance, setTokenBalance] = React.useState('0');
@@ -118,7 +118,7 @@ const Index = () => {
       .catch((err: Error) => {
         console.log(err);
       });
-    if (chain && chain.id === 5) {
+    if (chain && chain.id === 11155111) {
       // get the ERC20 balance
       const NightTestTokenContract = new ethers.Contract(
         '0xc62b062645720808ee49f0df185b3228fa6288df',
@@ -143,7 +143,7 @@ const Index = () => {
   }, [address, currentTx]);
 
   React.useEffect(() => {
-    if (chain && chain.id === 5) {
+    if (chain && chain.id === 11155111) {
       // get estimate
       if (fromEth && parseFloat(nativeInput) > 0) {
         getSwapQuote(fromEth, nativeInput)
@@ -186,7 +186,7 @@ const Index = () => {
   // input handlers
   const bigButtonHandler = async () => {
     if (isDisconnected || !address) return;
-    if (chain && chain.id !== 5) {
+    if (chain && chain.id !== 11155111) {
       // handle switching networks
       try {
         if (switchNetwork) await switchNetwork(5);
@@ -195,7 +195,7 @@ const Index = () => {
         console.log(err);
       }
     }
-    if (chain && chain.id === 5) {
+    if (chain && chain.id === 11155111) {
       // disable if there is already a tx
       if (currentTx !== '') return;
       if (
@@ -250,7 +250,7 @@ const Index = () => {
   };
 
   const getBigButtonText = () => {
-    if (chain && chain.id === 5) {
+    if (chain && chain.id === 11155111) {
       if (
         parseInt(tokenSwapAllowance, 10) === 0 ||
         parseInt(tokenSwapAllowance, 10) < parseFloat(tokenInput)
@@ -297,13 +297,13 @@ const Index = () => {
                   input={nativeInput}
                   setInput={setNativeInput}
                   balance={balance}
-                  tokenName={'GoreliETH'}
+                  tokenName={'SepoliaETH'}
                 />
                 <SwapComponent
                   input={tokenInput}
                   setInput={setTokenInput}
                   balance={tokenBalance}
-                  tokenName={'NTT'}
+                  tokenName={''}
                 />
               </>
             ) : (
@@ -319,7 +319,7 @@ const Index = () => {
                   input={nativeInput}
                   setInput={setNativeInput}
                   balance={balance}
-                  tokenName={'GoreliETH'}
+                  tokenName={'SepoliaETH'}
                 />
               </>
             )}
@@ -333,7 +333,7 @@ const Index = () => {
               <div className="text-base text-gray-100">
                 Processing Transaction{' '}
                 <a
-                  href={`https://goerli.etherscan.io/tx/${currentTx}`}
+                  href={`https://sepolia.etherscan.io/tx/${currentTx}`}
                   target="_blank"
                   className="font-pixel text-xl text-primary-200 decoration-primary-200"
                 >
