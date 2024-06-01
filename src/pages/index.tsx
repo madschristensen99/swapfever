@@ -291,17 +291,6 @@ const Index = () => {
                 ^
               </div>
             </div>
-            <div className="toggle-switch">
-              <button
-                className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
-                onClick={() => {
-                  setMode(mode === 'swap' ? 'addLiquidity' : 'swap');
-                }}
-              >
-                {mode === 'swap' ? 'Switch to Add Liquidity' : 'Switch to Swap'}
-              </button>
-
-            </div>
 
             {fromEth ? (
               <>
