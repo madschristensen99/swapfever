@@ -90,6 +90,7 @@ const Index = () => {
   const provider = useProvider({ chainId: 11155111 });
   // display state managment
   const [tokenInput, setTokenInput] = React.useState('0');
+  const [mode, setMode] = React.useState('swap'); // Possible values: 'swap', 'addLiquidity'
   const [tokenBalance, setTokenBalance] = React.useState('0');
   const [tokenSwapAllowance, setTokenSwapAllowance] = React.useState('0');
   const [nativeInput, setNativeInput] = React.useState('0');
@@ -290,6 +291,13 @@ const Index = () => {
                 ^
               </div>
             </div>
+<div className="toggle-switch">
+  <button className="my-2 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
+    onClick={() => setMode(mode === 'swap' ? 'addLiquidity' : 'swap')}>
+    {mode === 'swap' ? 'Switch to Add Liquidity' : 'Switch to Swap'}
+  </button>
+</div>
+
             {fromEth ? (
               <>
                 {' '}
