@@ -90,7 +90,6 @@ const Index = () => {
   const provider = useProvider({ chainId: 11155111 });
   // display state managment
   const [tokenInput, setTokenInput] = React.useState('0');
-  const [mode, setMode] = React.useState('swap'); // Possible values: 'swap', 'addLiquidity'
   const [tokenBalance, setTokenBalance] = React.useState('0');
   const [tokenSwapAllowance, setTokenSwapAllowance] = React.useState('0');
   const [nativeInput, setNativeInput] = React.useState('0');
